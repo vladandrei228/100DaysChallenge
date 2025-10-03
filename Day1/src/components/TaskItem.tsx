@@ -1,4 +1,4 @@
-import type { Task } from "../App.tsx";
+import type { Task } from "../services/service";
 
 type Props = {
   task: Task;
@@ -10,12 +10,17 @@ export default function TaskItem({ task, onUpdateStatus, onDelete }: Props) {
   return (
     <li className={` flex justify-between items-center p-3 mb-2 rounded shadow 
         ${task.status === "completed" ? "line-through text-gray-400 bg-green-100" : task.status === "working" ? "bg-yellow-100" : "bg-red-100" } `}>
-        <span className="font-semibold">
-        Title: {task.title}
-        <br /> 
-        Author: {task.author}
-        </span>
-      <select
+        <div>
+            <span className="font-semibold break-words">
+                Task: {task.title}
+            </span>
+            <br />
+            <span className="text-sm italic text-gray-600 break-words mr-4"> 
+            Author: {task.author}
+            </span>
+        </div>
+        <div>
+            <select
         value={task.status}
         onChange={(e) => onUpdateStatus(task.id, e.target.value as Task["status"])}
         className= "border rounded px-2 py-1 mr-4"       >
@@ -29,6 +34,8 @@ export default function TaskItem({ task, onUpdateStatus, onDelete }: Props) {
       >
         ✕
       </button>
+        </div>
+      
     </li>
   );
 }

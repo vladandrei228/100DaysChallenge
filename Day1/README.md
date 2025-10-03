@@ -50,9 +50,8 @@ Build a simple **Task Tracker App** where users can:
 ---
 
 ### 🔹 Stretch Goals (Optional)
-- [ ] Add a filter (show only pending / working / completed)  
-- [ ] Add a counter (e.g., “3 tasks pending”)  
-- [ ] Add simple animations for task transitions  
+- [ DONE ] Add a filter (show only pending / working / completed)  
+- [ DONE ] Add a counter (e.g., “3 tasks pending”) 
 
 
 ---
