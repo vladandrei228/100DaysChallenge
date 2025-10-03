@@ -8,15 +8,21 @@ type Props = {
 
 export default function TaskItem({ task, onUpdateStatus, onDelete }: Props) {
   return (
-    <li className="flex justify-between items-center bg-white p-3 mb-2 rounded shadow">
-      <span
-        onClick={() => onUpdateStatus(task.id, task.status)}
-        className={`cursor-pointer ${
-          task.status === "completed" ? "line-through text-gray-400" : ""
-        }`}
-      >
-        {task.title} ({task.status})
-      </span>
+    <li className={` flex justify-between items-center p-3 mb-2 rounded shadow 
+        ${task.status === "completed" ? "line-through text-gray-400 bg-green-100" : task.status === "working" ? "bg-yellow-100" : "bg-red-100" } `}>
+        <span className="font-semibold">
+        Title: {task.title}
+        <br /> 
+        Author: {task.author}
+        </span>
+      <select
+        value={task.status}
+        onChange={(e) => onUpdateStatus(task.id, e.target.value as Task["status"])}
+        className= "border rounded px-2 py-1 mr-4"       >
+        <option value="pending">Pending</option>
+        <option value="working">Working</option>
+        <option value="completed">Completed</option>
+      </select>
       <button
         onClick={() => onDelete(task.id)}
         className="text-red-500 hover:text-red-700"

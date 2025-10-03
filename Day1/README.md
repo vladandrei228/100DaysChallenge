@@ -33,19 +33,19 @@ Build a simple **Task Tracker App** where users can:
 ---
 
 ### 🔹 Core Features to Implement
-- [ ] **fetchTasks()** → Load tasks from Supabase and display them  
-- [ ] **addTask()** → Insert a new task with default status `pending`  
-- [ ] **updateStatus()** → Cycle a task’s status: `pending → working → completed → pending`  
-- [ ] **deleteTask()** → Remove a task from Supabase  
+- [ DONE ] **fetchTasks()** → Load tasks from Supabase and display them  
+- [ DONE ] **addTask()** → Insert a new task with default status `pending`  
+- [ DONE ] **updateStatus()** → Cycle a task’s status: `pending → working → completed → pending`  
+- [ DONE ] **deleteTask()** → Remove a task from Supabase  
 
 ---
 
 ### 🔹 UI / UX
-- [ ] Input field + “Add” button to create tasks  
-- [ ] Task list showing all tasks with their current status  
-- [ ] Click on a task to cycle its status  
-- [ ] Delete button (❌) to remove a task  
-- [ ] Style with Tailwind (bonus: use colored badges for status)  
+- [ DONE ] Input field + “Add” button to create tasks  
+- [ DONE ] Task list showing all tasks with their current status  
+- [ DONE ] Click on a task to cycle its status  
+- [ DONE ] Delete button (❌) to remove a task  
+- [ DONE ] Style with Tailwind (bonus: use colored badges for status)  
 
 ---
 
