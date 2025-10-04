@@ -123,6 +123,7 @@ async function filterTasksHandler(status: Task["status"] | "all") {
           className="w-full border border-blue-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
         />
         <select
+        title="Select task status"
           value={newTaskStatus}
           onChange={(e) => setNewTaskStatus(e.target.value as Task["status"])}
           className="w-full border border-blue-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
@@ -148,6 +149,7 @@ async function filterTasksHandler(status: Task["status"] | "all") {
           Clear All Tasks
         </button>
         <select
+          title="Filter tasks by status"
           onChange={(e) => filterTasksHandler(e.target.value as Task["status"] | "all")}
           className="w-full border border-black-200 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-300"
         >

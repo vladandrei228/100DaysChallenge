@@ -21,6 +21,7 @@ export default function TaskItem({ task, onUpdateStatus, onDelete }: Props) {
         </div>
         <div>
             <select
+            title="Status"
         value={task.status}
         onChange={(e) => onUpdateStatus(task.id, e.target.value as Task["status"])}
         className= "border rounded px-2 py-1 mr-4"       >
