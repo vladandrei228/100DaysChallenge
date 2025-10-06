@@ -13,7 +13,7 @@ function App() {
     <>
       <div  className='p-6 max-2-4xl mx-auto space-y-6'>
         <h1 className='text-2xl font-bold'>💰 Personal Finance Dashboard</h1>
-
+         
         <StatsCards today={todayTotal} week={lastWeekTotal} month={monthTotal} total={total}/>
 
         <div className='grid grid-cols-2 gap-6'>
@@ -28,7 +28,7 @@ function App() {
             {expenses.map((exp) => (
               <li key={exp.id} className='flex justify-between'>
                 <span>
-                  {getCategoryIcon(exp.category)} {exp.title} - {exp.amount}$
+                  {getCategoryIcon(exp.category)} {exp.title} - {exp.amount}kr
                 </span>
                 <button
                   onClick={() => deleteExpenses(exp.id)}
@@ -41,6 +41,9 @@ function App() {
           </ul>
         </div>
       </div>
+
+    
+
     </>
   )
 }

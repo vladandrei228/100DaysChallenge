@@ -1,13 +1,13 @@
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
 import type { Expense } from "../types";
-import { defaultCategories } from "../utils/categories";
+import { useCategories } from "../hooks/useCategories";
 
 interface CategoryChartProps {
     expenses: Expense[];
 }
 
 export default function CategoryChart({ expenses }: CategoryChartProps) {
-    const data = defaultCategories.map(cat => ({
+    const data = useCategories().categories.map(cat => ({
         name: cat.name,
         value: expenses.filter(e => e.category === cat.id).reduce((sum, e) => sum + e.amount, 0),
         icon: cat.icon

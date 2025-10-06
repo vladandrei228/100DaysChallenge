@@ -11,3 +11,5 @@ export interface Category {
     name: string;
     icon: string;
 }
+
+export type ExpenseInsert = Omit<Expense, "id">;

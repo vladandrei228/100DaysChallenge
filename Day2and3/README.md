@@ -21,6 +21,7 @@ The project is split into two phases:
 ## 📅 Day 1 – LocalStorage Version
 
 ### Requirements & Goals
+
 - Local, single‑user finance dashboard
 - Persistent data using `localStorage`
 - Add, view, and delete expenses
@@ -28,6 +29,7 @@ The project is split into two phases:
 - Fast setup with Vite + Tailwind
 
 ### Tasks
+
 1. **Project Setup**
    - Create Vite React+TS project
    - Install Recharts, Lucide, date‑fns
@@ -64,62 +66,58 @@ The project is split into two phases:
 
 ---
 
-## 📅 Day 2 – Supabase Extension
+## 📅 Day 2 – Supabase Migration
 
-### Requirements & Goals
-- Cloud‑based, multi‑device finance dashboard
-- User authentication with Supabase Auth
-- Expenses stored in Supabase database
-- Real‑time updates and multi‑user support
+### 🎯 Goals
 
-### Tasks
-1. **Set Up Supabase Backend**
-   - Create Supabase project, get URL and keys
-   - Initialize database tables (expenses, users, categories)
-   - Configure Row Level Security (RLS) policies
+- Move from localStorage to Supabase
+- Store expenses + categories in cloud DB
+- Add loading/error states
+- Prepare for multi‑device use
+
+### ✅ Tasks
+
+1. **Supabase Backend Setup**
+   - [x] Create Supabase project
+   - [x] Create `categories` + `expenses` tables
+   - [x] Disable RLS for dev (or add permissive policies)
+   - [x] Seed default categories
 
 2. **Supabase Client Integration**
-   - Add `@supabase/supabase-js` to frontend
-   - Set up Supabase client/config file
+   - [x] Install `@supabase/supabase-js`
+   - [x] Create `supabaseClient.ts`
+   - [x] Add `.env` with project URL + anon key
 
-3. **Authentication**
-   - Implement signup/signin/signout flows
-   - Add email + social login
+3. **Replace LocalStorage**
+   - [x] Update services to call Supabase (`getExpenses`, `insertExpense`, `deleteExpense`, `getCategories`)
+   - [x] Update `useExpenses` hook
+   - [x] Add `loading` + `error` states
 
-4. **Sync Expenses**
-   - Replace localStorage utilities with Supabase API calls
-   - CRUD: Add, fetch, delete expenses
-   - Use Supabase real‑time for live updates
+4. **Data Migration**
+   - [x] Script to import old localStorage data into Supabase
+   - [x] Clear localStorage after migration
 
-5. **Multi‑User Support**
-   - Record which user created each expense
-   - Filter expense views by user/session
+5. **UI Enhancements**
+   - [x] Form submits directly to Supabase
+   - [x] Category dropdown populated from DB
+   - [x] Error + loading indicators in UI
 
-6. **Data Migration**
-   - Import old localStorage data into Supabase
-   - Migrate sample/real expenses
+6. **Testing**
+   - [x] Add/delete expenses → confirm in Supabase
+   - [x] Refresh → persistence confirmed
+   - [x] Charts + totals use DB data
 
-7. **UI Enhancements**
-   - Show signed‑in user profile/avatar
-   - Add loading and error handling
-   - Add logout UI and conditional rendering
+### 🚀 Outcome
 
-8. **Cross‑Device Testing**
-   - Sign in on two devices
-   - Confirm real‑time sync
-   - Test expense CRUD and visual summary/chart
-
----
-
-## 🚀 Bonus Ideas (Optional After Day 2)
-- Expense receipt file uploads with Supabase Storage
-- Filters: Date range, category, amount
-- Mobile PWA support
-- Export data as CSV
+- Expenses + categories now in Supabase
+- Multi‑device ready (open access)
+- UI shows loading/error states
+- Charts and totals computed from live DB data
 
 ---
 
 ## 🛠️ Tech Stack
+
 - **Frontend:** React.js, TypeScript, Tailwind CSS, Recharts
 - **Backend/DB:** Supabase (Postgres, Auth, Realtime, Storage)
 - **Build Tool:** Vite
