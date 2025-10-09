@@ -42,7 +42,7 @@ export default function BookingForm({onDone}: Props) {
             <input title='Date' type='date' value={date} onChange={(e) => setDate(e.target.value)} className="p-4 rounded-2xl shadow-sm border flex items-center justify-between w-full"/>
             <input type="text" placeholder='Event Type' value={eventType} onChange={(e) => setEventType(e.target.value)} className="p-4 rounded-2xl shadow-sm border flex items-center justify-between w-full" />
             
-            <input type="submit" value="Make Appointment" className="bg-purple-400 text-white hover:bg-purple-600 border border-purple-900 py-2 px-4 rounded-full px-2 py-1 " />
+            <input type="submit" value="Make Appointment" className="bg-purple-400 text-white hover:bg-purple-600 border border-purple-900 py-2 px-4 rounded-full" />
         </form>
     )
 }

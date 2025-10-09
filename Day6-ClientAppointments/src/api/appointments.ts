@@ -3,7 +3,6 @@ import { supabase } from '../supabaseClient';
 
 
 export async function fetchAppointments(): Promise<Appointment[]> {
-// NOTE: intentionally minimal error handling — improve if you like
 const { data, error } = await supabase
 .from('appointments')
 .select('*')
