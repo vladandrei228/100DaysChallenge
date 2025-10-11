@@ -1,0 +1,27 @@
+{
+  "name": "100dayschallenge",
+  "version": "1.0.0",
+  "description": "Welcome to my **100 Days Challenge**! 🎯  \r This repository is a collection of **100 mini-projects**, each solving an **AI-generated problem-solving challenge**.  \r The goal is to learn, build, and grow consistently for 100 days straight.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladandrei228/100DaysChallenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vladandrei228/100DaysChallenge/issues"
+  },
+  "homepage": "https://github.com/vladandrei228/100DaysChallenge#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.5",
+    "typescript": "^5.9.3"
+  }
+}
