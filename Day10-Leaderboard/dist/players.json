@@ -1,0 +1,7 @@
+[
+    { "id": "p1", "name": "Asha", "score": 920, "date": "2025-10-01" },
+    { "id": "p2", "name": "Bjørn", "score": 870, "date": "2025-10-02" },
+    { "id": "p3", "name": "Cara", "score": 880, "date": "2025-10-03" },
+    { "id": "p4", "name": "Diego", "score": 720, "date": "2025-10-02" },
+    { "id": "p5", "name": "Evelyn", "score": 650, "date": "2025-10-01" }
+]
